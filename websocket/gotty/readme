@@ -1,0 +1,2 @@
+./gotty --address 10.148.181.214 -w -p 9388 --title-format handpay-logs --permit-arguments kubectl logs -f
+./gotty --address 10.148.181.214 -w -p 9395 --title-format handpay-console --permit-arguments kubectl exec -it

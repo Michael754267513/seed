@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+        <td>包名</td>
+        <td>类型</td>
+        <td>项目</td>
+        <td>环境</td>
+        <td>项目所有者</td>
+        <td>访问地址</td>
+        <td>访问类型</td>
+        <td>容器名</td>
+        <td>容器ip</td>
+        <td>计算节点</td>
+        <td>容器状态</td>
+        <td>容器终端</td>
+        <td>容器日志</td>
+    {% for item in pods %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.project }}</td>
+        <td>{{ item.env }}</td>
+        <td>{{ item.owner  }}</td>
+        {% if item.ising == "True" %}
+        <td>{{ item.ingress +"."+ item.env + ".bfintech.com" }}</td>
+        <td>外部</td>
+        {% else %}
+        <td>{{ item.ingress }}</td>
+        <td>内部</td>
+        {% endif %}
+        <td>{{ item.pod_name  }}</td>
+        <td>{{ item.podip  }}</td>
+        <td>{{ item.nodeip  }}</td>
+        <td>{{ item.status  }}</td>
+        <td><input type="button" value="终端入口" onclick="location.href='http://10.148.181.214:9395/?arg={{ item.pod_name }}&arg=/bin/bash&arg=-n&arg={{ item.env }}'"></td>
+        <td><input type="button" value="日志入口" onclick="location.href='http://10.148.181.214:9388/?arg={{ item.pod_name }}&arg=-n&arg={{ item.env }}'"></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

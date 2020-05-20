@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  redis:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-10T14:07:33.258772789+08:00
+    description: A Helm chart for Kubernetes
+    digest: 31db38306dda59f2fcb5dd18363eff8aa75e56ccf287f4ac13c6ae3d79b3189c
+    name: redis
+    urls:
+    - redis-0.1.0.tgz
+    version: 0.1.0
+  tomcat:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-10T14:07:33.259048381+08:00
+    description: A Helm chart for Kubernetes
+    digest: 045c4b1b6fc0d4c7a027230405b0405ee73fa9c2ffcc261c67ba0174ada28138
+    name: tomcat
+    urls:
+    - tomcat-0.1.0.tgz
+    version: 0.1.0
+  zookeeper:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-07-10T14:07:33.259366396+08:00
+    description: A Helm chart for Kubernetes
+    digest: f10184905772257e1719965f1fb400b5408c1d5096fe2e9c3f1b5ad3f7d978ef
+    name: zookeeper
+    urls:
+    - zookeeper-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-07-10T14:07:33.258288389+08:00
